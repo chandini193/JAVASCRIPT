@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginPage</title>
+    <style>
+        .login {
+            text-align: center;
+            border: solid black 2px;
+            width: 500px;
+            margin: auto;
+            margin-top: 60px;
+            background-color: cornflowerblue;
+        }
+    </style>
+    <script>
+        function validate(f) {
+            var possible = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9])+$/;
+            if (!possible.test(f.emailId.value)) {
+                alert("Please provide a valid email address");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="login">
+        <form name="f" onsubmit="return validate(f)">
+            <h1>Login</h1>
+            <div>
+                <label>Email Id: </label>
+                <input type="email" name="emailId" placeholder="Enter Email Id">
+            </div>
+            <br><br>
+            <div>
+                <label>Password:</label>
+                <input type="password" name="password" placeholder="Enter Password">
+            </div>
+            <br><br>
+            <div>
+                <button style="width: 90px; height: 30px;">Login</button>
+            </div>
+            <br><br>
+        </form>
+    </div>
+</body>
+
+</html>
